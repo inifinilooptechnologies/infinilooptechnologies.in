@@ -36,7 +36,6 @@
     --nav-height: 76px;
 
     --nav-bg: rgba(18, 7, 38, 0.96);
-    --nav-bg-scrolled: rgba(10, 4, 24, 0.98);
 
     --nav-border:
         rgba(255, 255, 255, 0.10);
@@ -278,7 +277,7 @@ textarea {
     display: flex;
     align-items: center;
 
-    background: rgba(255, 255, 255, 0.96);
+    background: var(--nav-bg) !important;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
@@ -413,10 +412,8 @@ body {
    ============================================================ */
 
 #mainNav.scrolled {
-    background: rgba(255, 255, 255, 0.985);
-
-    box-shadow:
-        0 8px 30px rgba(37, 6, 74, 0.12);
+    background: var(--nav-bg) !important;
+    box-shadow: var(--nav-shadow);
 }
 
 
@@ -948,23 +945,15 @@ body {
 
 #mainNav.scrolled {
     position: fixed !important;
-
     top: 0 !important;
-
+    left: 0 !important;
+    right: 0 !important;
     height: var(--nav-height) !important;
-
     min-height: var(--nav-height) !important;
-
     transform: none !important;
-
-    background:
-        var(--nav-bg-scrolled) !important;
-
-    border-bottom-color:
-        rgba(139, 92, 246, 0.20) !important;
-
-    box-shadow:
-        0 12px 40px rgba(0, 0, 0, 0.30);
+    background: var(--nav-bg) !important;
+    border-bottom: 1px solid var(--nav-border) !important;
+    box-shadow: var(--nav-shadow) !important;
 }
 
 
@@ -1083,8 +1072,7 @@ body {
 
         min-height: var(--nav-height) !important;
 
-        background:
-            rgba(18, 7, 38, 0.98) !important;
+        background: var(--nav-bg) !important;
 
         box-shadow:
             0 8px 30px rgba(0, 0, 0, 0.25);
@@ -1155,8 +1143,7 @@ body {
 
         padding: 10px;
 
-        background:
-            rgba(19, 8, 42, 0.99);
+        background: rgba(19, 8, 42, 0.99);
 
         border:
             1px solid rgba(255, 255, 255, 0.12);
