@@ -1,5 +1,5 @@
 /* ============================================================
-   INFINI LOOP TECHNOLOGIES - AJM
+   Infiniloop Technologies - AJM
    COMPLETE WEBSITE JAVASCRIPT
 
    MAIN FLOW
@@ -103,7 +103,7 @@ document.addEventListener(
     function () {
 
         console.log(
-            "Infini Loop Technologies website loaded."
+            "Infiniloop Technologies website loaded."
         );
 
 
@@ -200,172 +200,42 @@ function initializeYear() {
 }
 
 
-/* ============================================================
-   NAVBAR
-   ============================================================
 
-   IMPORTANT:
 
-   JavaScript does NOT change:
-   - top
-   - position
-   - transform
-   - height
+// /* ============================================================
+//    FIXED NAVBAR SCROLL EFFECT
+//    Infiniloop Technologies
+//    ============================================================ */
 
-   CSS handles the fixed navbar.
+// document.addEventListener("DOMContentLoaded", function () {
 
-   JavaScript only changes:
-   .scrolled
+//     const mainNav = document.getElementById("mainNav");
 
-============================================================ */
-
-// function initializeNavbar() {
-
-//     const navbar =
-//         document.getElementById(
-//             "mainNav"
-//         );
-
-//     if (!navbar) {
+//     if (!mainNav) {
 //         return;
 //     }
 
+//     function handleNavbarScroll() {
 
-//     function updateNavbar() {
-
-//         if (window.scrollY > 40) {
-
-//             navbar.classList.add(
-//                 "scrolled"
-//             );
-
+//         if (window.scrollY > 20) {
+//             mainNav.classList.add("scrolled");
 //         } else {
-
-//             navbar.classList.remove(
-//                 "scrolled"
-//             );
-
+//             mainNav.classList.remove("scrolled");
 //         }
 
 //     }
 
+//     handleNavbarScroll();
 
 //     window.addEventListener(
 //         "scroll",
-//         updateNavbar,
+//         handleNavbarScroll,
 //         {
 //             passive: true
 //         }
 //     );
 
-
-//     updateNavbar();
-// }
-
-
-/* ============================================================
-   MOBILE NAVIGATION
-============================================================ */
-
-// function initializeMobileNavigation() {
-
-//     const navbarCollapse =
-//         document.getElementById(
-//             "mainNavbar"
-//         );
-
-//     if (!navbarCollapse) {
-//         return;
-//     }
-
-
-//     const links =
-//         navbarCollapse.querySelectorAll(
-//             "a"
-//         );
-
-
-//     links.forEach(
-//         function (link) {
-
-//             link.addEventListener(
-//                 "click",
-//                 function () {
-
-//                     /*
-//                        Only close mobile menu.
-//                        Do NOT modify navbar position.
-//                     */
-
-//                     if (
-//                         window.innerWidth < 992 &&
-//                         navbarCollapse.classList.contains(
-//                             "show"
-//                         )
-//                     ) {
-
-//                         if (
-//                             typeof bootstrap !==
-//                             "undefined"
-//                         ) {
-
-//                             const collapse =
-//                                 bootstrap.Collapse
-//                                     .getInstance(
-//                                         navbarCollapse
-//                                     );
-
-//                             if (collapse) {
-
-//                                 collapse.hide();
-
-//                             }
-
-//                         }
-
-//                     }
-
-//                 }
-//             );
-
-//         }
-//     );
-// }
-
-/* ============================================================
-   FIXED NAVBAR SCROLL EFFECT
-   INFINI LOOP TECHNOLOGIES
-   ============================================================ */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const mainNav = document.getElementById("mainNav");
-
-    if (!mainNav) {
-        return;
-    }
-
-    function handleNavbarScroll() {
-
-        if (window.scrollY > 20) {
-            mainNav.classList.add("scrolled");
-        } else {
-            mainNav.classList.remove("scrolled");
-        }
-
-    }
-
-    handleNavbarScroll();
-
-    window.addEventListener(
-        "scroll",
-        handleNavbarScroll,
-        {
-            passive: true
-        }
-    );
-
-});
+// });
 
 /* ============================================================
    REVEAL ANIMATION
