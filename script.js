@@ -1,30 +1,4 @@
 /* ============================================================
-   Infiniloop Technologies - AJM
-   COMPLETE WEBSITE JAVASCRIPT
-
-   MAIN FLOW
-
-   USER
-      ↓
-   FORM VALIDATION
-      ↓
-   SUPABASE
-      ↓
-   SAVE ENQUIRY
-      ↓
-   EMAILJS
-      ↓
-   OWNER RECEIVES EMAIL
-      ↓
-   SUCCESS POPUP
-
-   IMPORTANT:
-   Navbar is controlled only by CSS position: fixed.
-   JavaScript NEVER moves the navbar.
-============================================================ */
-
-
-/* ============================================================
    SUPABASE CONFIGURATION
 ============================================================ */
 
