@@ -9384,3 +9384,728 @@ main > .contact-hero {
         animation: none !important;
     }
 }
+
+/* ============================================================
+   NAVBAR ROOT
+============================================================ */
+
+#mainNav {
+
+    --nav-height: 56px;
+
+    position: fixed !important;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    min-height: var(--nav-height);
+
+    z-index: 99999;
+
+    margin: 0;
+    padding: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18, 7, 38, 0.98),
+            rgba(31, 10, 63, 0.98)
+        );
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.20);
+
+    transform: none !important;
+
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+/* ============================================================
+   NAVBAR CONTAINER
+============================================================ */
+
+#mainNav .site-container {
+
+    min-height: var(--nav-height);
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+}
+
+
+/* ============================================================
+   BRAND
+============================================================ */
+
+#mainNav .navbar-brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+
+}
+
+
+/* ============================================================
+   INFINITY LOGO
+============================================================ */
+
+#mainNav .infinity-logo {
+
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 43px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d946ef 0%,
+            #a855f7 45%,
+            #7c3aed 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(168, 85, 247, 0.45)
+        );
+
+}
+
+
+/* ============================================================
+   BRAND TEXT
+============================================================ */
+
+#mainNav .brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+/* TECHNOLOGIES */
+#mainNav .brand-text small {
+
+    display: block;
+
+    margin-top: 6px;
+
+    color: #c4b5fd;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    line-height: 1;
+
+}
+
+
+/* ============================================================
+   DESKTOP NAVIGATION
+============================================================ */
+
+#mainNav .navbar-collapse {
+
+    align-items: center;
+
+}
+
+
+/* Navigation list */
+#mainNav .navbar-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-left: auto;
+
+}
+
+
+/* Navigation item */
+#mainNav .nav-item {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* Navigation link */
+#mainNav .nav-link {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 8px 14px;
+
+    color: rgba(255, 255, 255, 0.82) !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+/* ============================================================
+   DESKTOP NAV HOVER
+============================================================ */
+
+#mainNav .nav-link:hover {
+
+    color: #ffffff !important;
+
+    background:
+        rgba(139, 92, 246, 0.10);
+
+}
+
+
+/* ============================================================
+   DESKTOP ACTIVE LINK
+============================================================ */
+
+#mainNav .nav-link.active {
+
+    color: #ffffff !important;
+
+    background:
+        rgba(139, 92, 246, 0.12);
+
+}
+
+
+/* Active underline */
+#mainNav .nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+
+    bottom: 2px;
+
+    height: 2px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d946ef,
+            #8b5cf6,
+            #6d28d9
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+/* Show underline */
+#mainNav .nav-link:hover::after,
+#mainNav .nav-link.active::after {
+
+    transform: scaleX(1);
+
+}
+
+
+/* ============================================================
+   IMPORTANT:
+   DESKTOP - HIDE HAMBURGER
+============================================================ */
+
+@media (min-width: 992px) {
+
+    #mainNav .navbar-toggler {
+
+        display: none !important;
+
+    }
+
+
+    #mainNav .navbar-collapse {
+
+        display: flex !important;
+
+        flex-basis: auto !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        background: transparent !important;
+
+        border: 0 !important;
+
+    }
+
+
+    #mainNav .navbar-nav {
+
+        flex-direction: row !important;
+
+        width: auto;
+
+        margin-left: auto !important;
+
+    }
+
+}
+
+
+/* ============================================================
+   TABLET + MOBILE
+   BELOW 992px
+============================================================ */
+
+@media (max-width: 991.98px) {
+
+    #mainNav {
+
+        --nav-height: 74px;
+
+    }
+
+
+    #mainNav .site-container {
+
+        min-height: var(--nav-height);
+
+        padding-left: 18px;
+        padding-right: 18px;
+
+    }
+
+
+    /* --------------------------------------------------------
+       SHOW HAMBURGER
+    -------------------------------------------------------- */
+
+    #mainNav .navbar-toggler {
+
+        display: inline-flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 52px;
+        height: 48px;
+
+        margin-left: auto;
+
+        padding: 0;
+
+        flex-shrink: 0;
+
+        background:
+            rgba(255, 255, 255, 0.04);
+
+        border: 1px solid
+            rgba(255, 255, 255, 0.28);
+
+        border-radius: 11px;
+
+        outline: none !important;
+
+        box-shadow: none !important;
+
+    }
+
+
+    #mainNav .navbar-toggler:hover {
+
+        background:
+            rgba(139, 92, 246, 0.15);
+
+        border-color:
+            rgba(196, 181, 253, 0.55);
+
+    }
+
+
+    #mainNav .navbar-toggler:focus,
+    #mainNav .navbar-toggler:active {
+
+        outline: none !important;
+
+        box-shadow: none !important;
+
+    }
+
+
+    /* --------------------------------------------------------
+       CUSTOM HAMBURGER
+    -------------------------------------------------------- */
+
+    #mainNav .navbar-toggler-icon {
+
+        position: relative;
+
+        display: block;
+
+        width: 25px;
+        height: 20px;
+
+        background-image: none !important;
+
+    }
+
+
+    /* Middle line */
+    #mainNav .navbar-toggler-icon::before {
+
+        content: "";
+
+        position: absolute;
+
+        top: 9px;
+        left: 0;
+
+        width: 25px;
+        height: 2px;
+
+        border-radius: 20px;
+
+        background: #ffffff;
+
+    }
+
+
+    /* Top + bottom lines */
+    #mainNav .navbar-toggler-icon::after {
+
+        content: "";
+
+        position: absolute;
+
+        top: 1px;
+        left: 0;
+
+        width: 25px;
+        height: 2px;
+
+        border-radius: 20px;
+
+        background: #ffffff;
+
+        box-shadow:
+            0 16px 0 #ffffff;
+
+    }
+
+
+    /* --------------------------------------------------------
+       COLLAPSED MENU
+    -------------------------------------------------------- */
+
+    #mainNav .navbar-collapse {
+
+        width: 100%;
+
+        margin-top: 8px;
+
+        padding: 10px 0 14px;
+
+        background:
+            rgba(18, 7, 38, 0.98);
+
+        border-top:
+            1px solid rgba(255, 255, 255, 0.08);
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.08);
+
+    }
+
+
+    /* --------------------------------------------------------
+       MOBILE NAV LIST
+    -------------------------------------------------------- */
+
+    #mainNav .navbar-nav {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 3px;
+
+        margin: 0 !important;
+
+    }
+
+
+    /* --------------------------------------------------------
+       MOBILE NAV ITEMS
+    -------------------------------------------------------- */
+
+    #mainNav .nav-item {
+
+        width: 100%;
+
+        display: block;
+
+    }
+
+
+    /* --------------------------------------------------------
+       MOBILE NAV LINKS
+    -------------------------------------------------------- */
+
+    #mainNav .nav-link {
+
+        width: 100%;
+
+        min-height: 44px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        padding: 11px 16px;
+
+        color:
+            rgba(255, 255, 255, 0.88) !important;
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        border-radius: 8px;
+
+    }
+
+
+    #mainNav .nav-link:hover {
+
+        color: #ffffff !important;
+
+        background:
+            rgba(139, 92, 246, 0.14);
+
+    }
+
+
+    #mainNav .nav-link.active {
+
+        color: #ffffff !important;
+
+        background:
+            rgba(139, 92, 246, 0.18);
+
+    }
+
+
+    /* Remove desktop underline on mobile */
+    #mainNav .nav-link::after {
+
+        display: none;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   575px AND BELOW
+============================================================ */
+
+@media (max-width: 575.98px) {
+
+    #mainNav {
+
+        --nav-height: 70px;
+
+    }
+
+
+    #mainNav .site-container {
+
+        min-height: var(--nav-height);
+
+        padding-left: 14px;
+        padding-right: 14px;
+
+    }
+
+
+    /* Smaller logo */
+    #mainNav .infinity-logo {
+
+        width: 37px;
+        height: 37px;
+
+        font-size: 38px;
+
+    }
+
+
+    /* Smaller brand */
+    #mainNav .brand-text {
+
+        font-size: 18px;
+
+    }
+
+
+    #mainNav .brand-text small {
+
+        margin-top: 5px;
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    /* Smaller menu button */
+    #mainNav .navbar-toggler {
+
+        width: 48px;
+        height: 45px;
+
+        border-radius: 10px;
+
+    }
+
+
+    #mainNav .navbar-toggler-icon {
+
+        width: 23px;
+        height: 19px;
+
+    }
+
+
+    #mainNav .navbar-toggler-icon::before {
+
+        width: 23px;
+
+        top: 8px;
+
+    }
+
+
+    #mainNav .navbar-toggler-icon::after {
+
+        width: 23px;
+
+        box-shadow:
+            0 15px 0 #ffffff;
+
+    }
+
+}
